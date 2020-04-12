@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13b849ba-a705-4277-971d-45d2dfa2d154" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WheelApplet/presentational components/Wheel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/WheelApplet/presentational components/Wheel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WheelApplet/WheelApplet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/WheelApplet/WheelApplet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WheelApplet/WheelApplet.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/WheelApplet/WheelApplet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +94,7 @@
       <workItem from="1586439291269" duration="2557000" />
       <workItem from="1586467356513" duration="12263000" />
       <workItem from="1586542800473" duration="584000" />
-      <workItem from="1586693022809" duration="5215000" />
+      <workItem from="1586693022809" duration="6541000" />
     </task>
     <task id="LOCAL-00001" summary="Render wheel correctly">
       <created>1586542835481</created>
@@ -106,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586696200759</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Wheel is now composed of polygons, and the numbers are rotated correctly">
+      <created>1586702045133</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586702045133</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,41 +139,42 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Render wheel correctly" />
     <MESSAGE value="Working spin of wheel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working spin of wheel" />
+    <MESSAGE value="Wheel is now composed of polygons, and the numbers are rotated correctly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wheel is now composed of polygons, and the numbers are rotated correctly" />
   </component>
   <component name="WindowStateProjectService">
     <state x="240" y="50" key="#ESLint" timestamp="1586470160576">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state x="240" y="50" key="#ESLint/0.23.1280.723@0.23.1280.723" timestamp="1586470160576" />
-    <state x="378" y="138" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586425789918">
+    <state x="378" y="138" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586702960085">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state x="378" y="138" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.723@0.23.1280.723" timestamp="1586425789918" />
-    <state x="234" y="23" key="CommitChangelistDialog2" timestamp="1586696200329">
+    <state x="378" y="138" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.723@0.23.1280.723" timestamp="1586702960085" />
+    <state x="234" y="23" key="CommitChangelistDialog2" timestamp="1586702044880">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state x="234" y="23" key="CommitChangelistDialog2/0.23.1280.723@0.23.1280.723" timestamp="1586696200329" />
+    <state x="234" y="23" key="CommitChangelistDialog2/0.23.1280.723@0.23.1280.723" timestamp="1586702044880" />
     <state x="100" y="123" width="1080" height="523" key="DiffContextDialog" timestamp="1586473229641">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state x="100" y="123" width="1080" height="523" key="DiffContextDialog/0.23.1280.723@0.23.1280.723" timestamp="1586473229641" />
-    <state width="1238" height="179" key="GridCell.Tab.0.bottom" timestamp="1586696585447">
+    <state width="1238" height="179" key="GridCell.Tab.0.bottom" timestamp="1586702960474">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state width="1238" height="179" key="GridCell.Tab.0.bottom/0.23.1280.723@0.23.1280.723" timestamp="1586696585447" />
-    <state width="1238" height="179" key="GridCell.Tab.0.center" timestamp="1586696585446">
+    <state width="1238" height="179" key="GridCell.Tab.0.bottom/0.23.1280.723@0.23.1280.723" timestamp="1586702960474" />
+    <state width="1238" height="179" key="GridCell.Tab.0.center" timestamp="1586702960474">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state width="1238" height="179" key="GridCell.Tab.0.center/0.23.1280.723@0.23.1280.723" timestamp="1586696585445" />
-    <state width="1238" height="179" key="GridCell.Tab.0.left" timestamp="1586696585444">
+    <state width="1238" height="179" key="GridCell.Tab.0.center/0.23.1280.723@0.23.1280.723" timestamp="1586702960474" />
+    <state width="1238" height="179" key="GridCell.Tab.0.left" timestamp="1586702960473">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state width="1238" height="179" key="GridCell.Tab.0.left/0.23.1280.723@0.23.1280.723" timestamp="1586696585444" />
-    <state width="1238" height="179" key="GridCell.Tab.0.right" timestamp="1586696585446">
+    <state width="1238" height="179" key="GridCell.Tab.0.left/0.23.1280.723@0.23.1280.723" timestamp="1586702960473" />
+    <state width="1238" height="179" key="GridCell.Tab.0.right" timestamp="1586702960474">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state width="1238" height="179" key="GridCell.Tab.0.right/0.23.1280.723@0.23.1280.723" timestamp="1586696585446" />
+    <state width="1238" height="179" key="GridCell.Tab.0.right/0.23.1280.723@0.23.1280.723" timestamp="1586702960474" />
     <state x="128" y="84" key="MergeDialog" timestamp="1586356455084">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
