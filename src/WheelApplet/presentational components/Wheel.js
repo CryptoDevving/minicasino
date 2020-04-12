@@ -43,8 +43,8 @@ export default function Wheel(props){
                         strokeWidth: 1
                     }}
                 />
-                <text x={Math.cos(toRadians(0)) * r * 5/6 + centerx}
-                      y={Math.sin(toRadians(0)) * r * 5/6 + centery}
+                <text x={Math.cos(0) * r * 5/6 + centerx}
+                      y={Math.sin(0) * r * 5/6 + centery}
                       transform={`rotate(${(angle + angle2)/2} ${centerx} ${centery})`}
                 >
                     {i+1}

@@ -1,8 +1,8 @@
 #wheelflex {
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    height: 100%;
-    padding: 30px;
+     flex-flow: row nowrap;
+     justify-content: flex-start;
+     align-items: center;
+     height: 100%;
+     padding: 30px;
 
-}
+ }
