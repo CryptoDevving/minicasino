@@ -1,6 +1,10 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/core/styles";
 
+function toRadians(degrees) {
+    return degrees * Math.PI / 180
+}
+
 export default function Wheel(props){
     let {height, width, padding, fields, spinDegrees, spinDuration, ...rest} = props;
     const classes = makeStyles(theme => ({
@@ -17,7 +21,6 @@ export default function Wheel(props){
         }
     }))();
 
-    console.log(props);
     let r=Math.min(height, width) / 2 - 2 * padding;
     let centerx = width / 2;
     let centery = height / 2;
@@ -38,7 +41,7 @@ export default function Wheel(props){
                 <polygon
                     points={x1 + "," + y1 + " " + centerx + "," + centery + " " + x2 + "," + y2}
                     style={{
-                        fill: "lime",
+                        fill: 'hsla(' + angle + ', 100%, 60%, 1)',
                         stroke: lineColor,
                         strokeWidth: 1
                     }}
@@ -60,9 +63,4 @@ export default function Wheel(props){
 
         </svg>
     )
-}
-
-
-function toRadians(degrees) {
-    return degrees * Math.PI / 180
 }
