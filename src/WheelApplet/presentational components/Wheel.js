@@ -1,23 +1,22 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/core/styles";
 
-const useStyles = makeStyles(theme => ({
-    animatedItem: { //
-        animation: `$spin ${3000 + Math.random() * 15000}ms ${theme.transitions.easing.easeOut}`
-    },
-    "@keyframes spin": {
-        "0%": {
-            transform: "rotate(0deg)"
-        },
-        "100%": {
-            transform: "rotate(" + (180 + Math.random()*5000) + ")"
-        }
-    }
-}));
-
 export default function Wheel(props){
-    const classes = useStyles();
-    let {height, width, padding, fields, spinning, rpm} = props;
+    let {height, width, padding, fields, spinDegrees, spinDuration, ...rest} = props;
+    const classes = makeStyles(theme => ({
+        animatedItem: { //
+            animation: `$spin ${spinDuration}s ${theme.transitions.easing.easeOut} forwards`
+        },
+        "@keyframes spin": {
+            "0%": {
+                transform: "rotate(0deg)"
+            },
+            "100%": {
+                transform: "rotate(" + spinDegrees + "deg)"
+            }
+        }
+    }))();
+
     console.log(props);
     let r=Math.min(height, width) / 2 - 2 * padding;
     let centerx = width / 2;
@@ -49,15 +48,8 @@ export default function Wheel(props){
         );
     }
 
-    let spinStyle;
-    if (spinning){
-        spinStyle = {"animationDuration": rpmToSecs(rpm) + "s infinite linear"};
-    } else {
-        spinStyle = {};
-    }
-
     return (
-        <svg height={height} width={width} className={classes.animatedItem}>
+        <svg height={height} width={width} className={classes.animatedItem} {...rest}>
             <circle cx={width/2} cy={height/2} r={r} stroke={lineColor} strokeWidth={1} fill="none"/>
             {lines}
             Sorry, your browser does not support inline SVG.
@@ -66,13 +58,7 @@ export default function Wheel(props){
     )
 }
 
+
 function toRadians(degrees) {
     return degrees * Math.PI / 180
-}
-
-// This function calculates how many seconds for one round for a given number of RPM
-// input: rpm for animation
-// output: number of seconds per full rotation for animation
-function rpmToSecs(rpm) {
-    return 60 / rpm
 }
