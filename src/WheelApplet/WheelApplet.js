@@ -73,15 +73,21 @@ export default class WheelApplet extends React.Component { // height, width, fie
         )
     }
     start(){
-        let duration = 5 + Math.random() * 20; // Seconds
+        if (this.state.spinning){
+            return;
+        }
+        let duration = 5 + Math.random() * 15; // Seconds
+        let degrees = 360 + Math.random() * 5000; // Degrees
+        let angle = (degrees / 360 - Math.floor(degrees / 360)) * 360;
+        let result = this.props.fields - Math.ceil(angle / (360 / this.props.fields)) + 1;
         setTimeout(() => this.setState({
             spinning: false,
             spinDuration: 0,
-            lastResult: 9
+            lastResult: result
         }), duration * 1000);
         this.setState({
             spinning: true,
-            spinDegrees: 360 + Math.random() * 5000, // Degrees
+            spinDegrees: degrees,
             spinDuration: duration
         });
     }
