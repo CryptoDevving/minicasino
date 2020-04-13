@@ -4,25 +4,7 @@ import "./WheelApplet.css"
 import Wheel from "./presentational components/Wheel";
 import Button from "@material-ui/core/Button";
 
-const arrowStyle = {
-    position: "absolute",
-    top: -181,
-    left: -50,
-    fontSize: 100,
-    color: "red"
-};
-const resultBoxStyle = {
-    position: "absolute",
-    top: -62.5,
-    left: 50,
-    padding: "30px",
-    height: 85,
-    width: 85,
-    border: "solid black 3px",
-    textAlign: "center",
-    justifyContent: "center",
-    backgroundColor: "cornflowerblue"
-};
+
 const buttonHeight = 40;
 
 export default class WheelApplet extends React.Component { // height, width, fields and padding should be props
@@ -32,12 +14,14 @@ export default class WheelApplet extends React.Component { // height, width, fie
             spinDegrees: 0,
             spinDuration: 0,
             spinning: false,
-            lastResult: null
+            lastResult: null,
+            prevNumbers: []
         };
     }
     render(){
+        console.log(this.state.prevNumbers);
         return (
-            <div className="flex-container" id="wheelflex">
+            <div className="flex-container" id="wheelFlex">
                 <div>
                     <Wheel height={this.props.height-buttonHeight}
                            width={this.props.width}
@@ -62,9 +46,12 @@ export default class WheelApplet extends React.Component { // height, width, fie
 
 
                 </div>
-                <div style={{position: "relative", height: "100%"}}>
-                    <p style={arrowStyle}>&larr;</p>
-                    <div style={resultBoxStyle}>{this.state.lastResult}</div>
+                <div style={{height: "auto"}}>
+                    <p id="arrow">&larr;</p>
+                    <div id="resultBox">{this.state.lastResult}</div>
+                </div>
+                <div id="resultList" style={{maxHeight: this.props.height}}>
+                    { this.state.prevNumbers.map((num) => <div className="resultListItem">{num}</div>)}
                 </div>
 
 
@@ -85,10 +72,13 @@ export default class WheelApplet extends React.Component { // height, width, fie
             spinDuration: 0,
             lastResult: result
         }), duration * 1000);
+
         this.setState({
             spinning: true,
             spinDegrees: degrees,
-            spinDuration: duration
+            spinDuration: duration,
+            lastResult: null,
+            prevNumbers: !! this.state.lastResult ? [this.state.lastResult, ...this.state.prevNumbers] : [...this.state.prevNumbers]
         });
     }
 }

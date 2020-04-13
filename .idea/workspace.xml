@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13b849ba-a705-4277-971d-45d2dfa2d154" name="Default Changelist" comment="">
+    <list default="true" id="13b849ba-a705-4277-971d-45d2dfa2d154" name="Default Changelist" comment="Show latest number in box next to wheel + don't allow clicking on the wheel when it's spinning">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WheelApplet/WheelApplet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/WheelApplet/WheelApplet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WheelApplet/WheelApplet.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/WheelApplet/WheelApplet.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +91,7 @@
       <workItem from="1586439291269" duration="2557000" />
       <workItem from="1586467356513" duration="12263000" />
       <workItem from="1586542800473" duration="584000" />
-      <workItem from="1586693022809" duration="15534000" />
+      <workItem from="1586693022809" duration="21498000" />
     </task>
     <task id="LOCAL-00001" summary="Render wheel correctly">
       <created>1586542835481</created>
@@ -134,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586726592611</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Show latest number in box next to wheel + don't allow clicking on the wheel when it's spinning">
+      <created>1586727605843</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1586727605843</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +168,8 @@
     <MESSAGE value="Appearance" />
     <MESSAGE value="Add arrow and box to later hold the chosen number" />
     <MESSAGE value="Make background color of fields different" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make background color of fields different" />
+    <MESSAGE value="Show latest number in box next to wheel + don't allow clicking on the wheel when it's spinning" />
+    <option name="LAST_COMMIT_MESSAGE" value="Show latest number in box next to wheel + don't allow clicking on the wheel when it's spinning" />
   </component>
   <component name="WindowStateProjectService">
     <state x="240" y="50" key="#ESLint" timestamp="1586470160576">
@@ -171,30 +180,30 @@
       <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state x="378" y="138" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.723@0.23.1280.723" timestamp="1586702960085" />
-    <state x="234" y="23" key="CommitChangelistDialog2" timestamp="1586726592205">
+    <state x="214" y="23" key="CommitChangelistDialog2" timestamp="1586727804135">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state x="234" y="23" key="CommitChangelistDialog2/0.23.1280.723@0.23.1280.723" timestamp="1586726592205" />
+    <state x="214" y="23" key="CommitChangelistDialog2/0.23.1280.723@0.23.1280.723" timestamp="1586727804135" />
     <state x="100" y="123" width="1080" height="523" key="DiffContextDialog" timestamp="1586473229641">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state x="100" y="123" width="1080" height="523" key="DiffContextDialog/0.23.1280.723@0.23.1280.723" timestamp="1586473229641" />
-    <state width="1238" height="224" key="GridCell.Tab.0.bottom" timestamp="1586725439872">
+    <state width="1238" height="179" key="GridCell.Tab.0.bottom" timestamp="1586795586172">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state width="1238" height="224" key="GridCell.Tab.0.bottom/0.23.1280.723@0.23.1280.723" timestamp="1586725439872" />
-    <state width="1238" height="224" key="GridCell.Tab.0.center" timestamp="1586725439871">
+    <state width="1238" height="179" key="GridCell.Tab.0.bottom/0.23.1280.723@0.23.1280.723" timestamp="1586795586172" />
+    <state width="1238" height="179" key="GridCell.Tab.0.center" timestamp="1586795586171">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state width="1238" height="224" key="GridCell.Tab.0.center/0.23.1280.723@0.23.1280.723" timestamp="1586725439871" />
-    <state width="1238" height="224" key="GridCell.Tab.0.left" timestamp="1586725439870">
+    <state width="1238" height="179" key="GridCell.Tab.0.center/0.23.1280.723@0.23.1280.723" timestamp="1586795586171" />
+    <state width="1238" height="179" key="GridCell.Tab.0.left" timestamp="1586795586171">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state width="1238" height="224" key="GridCell.Tab.0.left/0.23.1280.723@0.23.1280.723" timestamp="1586725439870" />
-    <state width="1238" height="224" key="GridCell.Tab.0.right" timestamp="1586725439871">
+    <state width="1238" height="179" key="GridCell.Tab.0.left/0.23.1280.723@0.23.1280.723" timestamp="1586795586171" />
+    <state width="1238" height="179" key="GridCell.Tab.0.right" timestamp="1586795586171">
       <screen x="0" y="23" width="1280" height="723" />
     </state>
-    <state width="1238" height="224" key="GridCell.Tab.0.right/0.23.1280.723@0.23.1280.723" timestamp="1586725439871" />
+    <state width="1238" height="179" key="GridCell.Tab.0.right/0.23.1280.723@0.23.1280.723" timestamp="1586795586171" />
     <state width="1238" height="224" key="GridCell.Tab.1.bottom" timestamp="1586725439874">
       <screen x="0" y="23" width="1280" height="723" />
     </state>

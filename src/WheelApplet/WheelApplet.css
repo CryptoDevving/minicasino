@@ -1,8 +1,57 @@
-#wheelflex {
+body {
+     background-color: antiquewhite;
+}
+
+.resultListItem {
+     width: auto;
+     margin: 8px;
+     border: solid black 3px;
+     background-color: antiquewhite;
+     text-align: center;
+     justify-content: center;
+}
+
+#wheelFlex {
      flex-flow: row nowrap;
      justify-content: flex-start;
-     align-items: center;
      height: 100%;
      padding: 30px;
 
  }
+
+#arrow {
+     position: relative;
+     top: 69px;
+     right: 50px;
+     font-size: 100px;
+     color: red;
+}
+
+#resultBox {
+     position: relative;
+     bottom: 137.6px;
+     left: 50px;
+     padding: 30px;
+     height: 85px;
+     width: 85px;
+     border: solid black 3px;
+     text-align: center;
+     justify-content: center;
+     background-color: #999999;
+}
+
+#resultList {
+     min-height: 100%;
+     height: auto;
+     width: 100%;
+     position: relative;
+     left: 70px;
+     margin-right: 70px;
+     border: solid black 3px;
+     padding: 5px;
+     background-color: #999999;
+     flex-flow: column-reverse nowrap;
+     align-items: flex-end;
+     justify-content: flex-end;
+     overflow: hidden;
+}
